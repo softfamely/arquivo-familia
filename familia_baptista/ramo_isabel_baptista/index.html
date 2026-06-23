@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<p style="padding: 10px; margin: 0; font-family: sans-serif;">@Luis Borges</p>
+
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6; /* Cinzento claro da imagem */
+            color: #333;
+            padding: 30px;
+            margin: 0;
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        /* Contentor Principal da Árvore Vertical */
+        .arvore-vertical {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        /* Grupos de Ramos */
+        .ramo {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        /* Linhas verticais à esquerda */
+        .ramo::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -10px;
+            border-left: 2px solid #333;
+        }
+        .ramo:last-child::before {
+            bottom: auto;
+            height: 25px;
+        }
+        
+        /* Linhas horizontais conetoras */
+        .ramo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 22px;
+            border-top: 2px solid #333;
+        }
+        
+        /* Blocos Familiares - Fundo Branco e Contorno Verde */
+        .bloco-familiar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff; /* Branco Puro */
+            border: 2px solid #27ae60;   /* Verde das suas caixas */
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        .foto-perfil {
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #27ae60;
+            margin-right: 15px;
+            background-color: #eee;
+        }
+        
+        .info {
+            text-align: left;
+        }
+        .info .grau {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+        }
+        .info .nome {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #000;
+        }
+        .info .detalhes {
+            font-size: 0.8em;
+            color: #444;
+            margin-top: 2px;
+        }
+        
+        .btn-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <p class="subtitulo" style="text-align: center; color: #2c3e50; font-size: 1.2em; font-weight: bold; margin-top: 10px; margin-bottom: 30px;">Ramo Isabel Baptista Carneiro</p>
+
+
+    <div class="arvore-vertical">
+
+        <!-- ================= GERAÇÃO 1: BISAVÓS MATERNOS ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Bisavós">
+                <div class="info">
+                    <span class="grau">Bisavós Paternos</span>
+                    <div class="nome">Pai de Domingues & Lourença Marques</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Bisavós">
+                <div class="info">
+                    <span class="grau">Bisavós Maternos</span>
+                    <div class="nome">Manoel Corrêa & Jacinta Nóbrega</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 2: AVÓS MATERNOS E PATERNOS ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Avós">
+                <div class="info">
+                    <span class="grau">Avós Maternos</span>
+                    <div class="nome">Domingues Baptista</div>
+					<div class="detalhes">Natural do Sítio dos Casais d'Além, Freguesia da Camacha, Santa Cruz, Madeira</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Avós">
+                <div class="info">
+                    <span class="grau">Avós Maternos</span>
+                    <div class="nome">Helena de Nóbrega</div>
+                    <div class="detalhes">Natural do Sítio dos Casais d'Além, Freguesia da Camacha, Santa Cruz, Madeira</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 3: PAIS DE ALDINA E MANOEL ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Pai de Aldina</span>
+                    <div class="nome">António Baptista</div>
+					<div class="detalhes">(❤ N. 27/12/1865 / †) 💍 Casou a 02/09/1889 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/maria_teixeira.jpeg" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Mãe de Aldina</span>
+                    <div class="nome">Maria de Jesus Feixeira</div>
+					<div class="detalhes">(❤ N. Meados/1868 / †)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 4: TRONCO PRINCIPAL ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/isabel_carneiro.PNG" class="foto-perfil" alt="Isabel Baptista">
+                <div class="info">
+                    <span class="grau"></span>
+                    <div class="nome">Isabel Baptita (Carneiro)</div>
+					<div class="datas-dados">N.   <br>📍 Lubango, Angola<br>💍 Casamento: </div>
+                </div>
+            </div>
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.PNG" class="foto-perfil" alt="João">
+                <div class="info">
+                    <div class="nome">João Carneiro</div>
+					<div class="datas-dados">N.     Falecido</div>
+                </div>
+            </div>
+
+            <!-- ================= FILHOS, NETOS E BISNETOS (SUB-RAMOS) ================= -->
+			
+             <!-- LINHAGEM 1: ALBERTINA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Albertina">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Albertina Carneiro</div>
+						<div class="datas-dados">N.     - Falecida<br>📍 Lubango, Angola</div>
+                    </div>
+                </div>
+			</div>	
+			
+             <!-- LINHAGEM 2: BELITA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Belita">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Belita</div>
+						<div class="datas-dados">N.      - Falecida<br>📍 Lubango, Angola</div>
+                    </div>
+                </div>	
+            </div>	
+
+             <!-- LINHAGEM 3: MINDA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Minda">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Minda</div>
+						<div class="datas-dados">N.      - Falecida<br>📍 Lubango, Angola</div>
+                    </div>
+                </div>	
+            </div>
+
+             <!-- LINHAGEM 3: NECO -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_unknown.PNG" class="foto-perfil" alt="Neco">
+                    <div class="info">
+                        <span class="grau">Filho</span>
+                        <div class="nome">Neco</div>
+						<div class="datas-dados">N.      - Falecido<br>📍 Lubango, Angola</div>
+                    </div>
+                </div>	
+             </li>
+         </ul>
+
+    </li> <!-- Fecha o li do Neco (Linhagem 4) -->
+ </ul> <!-- Fecha o ul dos filhos (Geração 3) -->
+
+</li> <!-- Fecha o li do tronco principal (Isabel e João) -->
+        </ul> <!-- Fecha o ul dos antepassados (Geração 1 e 2) -->
+    </div> <!-- Fecha a div arvore-vertical -->
+
+ <!-- BOTÃO PARA VOLTAR À PÁGINA INICIAL DO SITE -->
+
+    <p style="text-align: center; margin-top: 50px;">
+        <a href="../index.html" class="btn-voltar" style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7f8c8d;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+           ">⬅ Voltar à Página Principal</a>
+    </p>
+	
+<!-- BOTÃO PARA VER ÁRVORE -->
+<p style="text-align: center; margin-top: 20px;">
+    <a href="arvore.html" class="btn-arvore" style="
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #27ae60;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+       ">🌳 Ver Árvore</a>
+</p>
+
+</body>
+</html>		

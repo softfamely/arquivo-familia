@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<p style="padding: 10px; margin: 0; font-family: sans-serif;">@Luis Borges</p>
+
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6; /* Cinzento claro da imagem */
+            color: #333;
+            padding: 30px;
+            margin: 0;
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        /* Contentor Principal da Árvore Vertical */
+        .arvore-vertical {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        /* Grupos de Ramos */
+        .ramo {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        /* Linhas verticais à esquerda */
+        .ramo::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -10px;
+            border-left: 2px solid #333;
+        }
+        .ramo:last-child::before {
+            bottom: auto;
+            height: 25px;
+        }
+        
+        /* Linhas horizontais conetoras */
+        .ramo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 22px;
+            border-top: 2px solid #333;
+        }
+        
+        /* Blocos Familiares - Fundo Branco e Contorno Verde */
+        .bloco-familiar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff; /* Branco Puro */
+            border: 2px solid #27ae60;   /* Verde das suas caixas */
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        .foto-perfil {
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #27ae60;
+            margin-right: 15px;
+            background-color: #eee;
+        }
+        
+        .info {
+            text-align: left;
+        }
+        .info .grau {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+        }
+        .info .nome {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #000;
+        }
+        .info .detalhes {
+            font-size: 0.8em;
+            color: #444;
+            margin-top: 2px;
+        }
+        
+        .btn-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <p class="subtitulo" style="text-align: center; color: #2c3e50; font-size: 1.2em; font-weight: bold; margin-top: 10px; margin-bottom: 30px;">Ramo Isabel Baptista Carneiro</p>
+
+
+    <div class="arvore-vertical">
+
+        <!-- ================= GERAÇÃO 1: BISAVÓS MATERNOS ================= -->
+ 
+ 
+ 
+ 
+
+        <!-- ================= GERAÇÃO 2: AVÓS MATERNOS E PATERNOS ================= -->
+ 
+ 
+ 
+
+        <!-- ================= GERAÇÃO 3: PAIS DE Raul ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Pai de Raul</span>
+                    <div class="nome">António Baptista</div>
+					<div class="detalhes">(❤ N. 27/12/1865 / †) 💍 Casou a 02/09/1889 </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/maria_teixeira.jpeg" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Mãe de Raul</span>
+                    <div class="nome">Maria de Jesus Feixeira</div>
+					<div class="detalhes">(❤ N. Meados/1868 / †)</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= GERAÇÃO 4: TRONCO PRINCIPAL ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/raul_baptista.jpg" class="foto-perfil" alt="Raul">
+                <div class="info">
+                    <span class="grau"></span>
+                    <div class="nome">Raul Baptista</div>
+					<div class="datas-dados">N.06/01/1906  † <br>📍 Lubango, Angola<br>💍 Casamento:Arminda da Silva Baptista †</div>
+                </div>
+            </div>
+			
+
+            <!-- ================= FILHOS, NETOS E BISNETOS (SUB-RAMOS) ================= -->
+			
+             <!-- LINHAGEM 1: AURELIO sa Silva BAPTISTA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person.png" class="foto-perfil" alt="Aurélio">
+                    <div class="info">
+                        <span class="grau">Filho</span>
+                        <div class="nome">Aurélio da Silva Baptista</div>
+						<div class="datas-dados">N.    <br>📍 Lubango, Angola 💍 Casamento com Maria Rosa</div>
+                    </div>
+                </div>
+
+			         <!-- Neto DE ANTONIO BAPTISTA -->
+<!-- Neto DE ANTONIO BAPTISTA -->
+<div class="ramo">
+    <div class="bloco-familiar secundario">
+        <img src="fotos/person_unknown.png" class="foto-perfil" alt="Aurelio">
+        <div class="info">
+            <span class="grau">Neto</span>
+            <div class="nome">Aurelio Baptista</div>
+            <div class="datas-dados">N.1960 <br> </div>
+        </div>
+    </div>
+
+    <!-- BISNETOS DE ANTONIO BAPTISTA (Filhos de Aurelio Baptista) -->
+
+    
+    <div class="ramo">
+        <div class="bloco-familiar descendente">
+            <img src="fotos/person_female.png" class="foto-perfil" alt="Mariana">
+            <div class="info">
+                <span class="grau">Bisnata</span>
+                <div class="nome">Mariana Baptista</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ramo">
+        <div class="bloco-familiar descendente">
+            <img src="fotos/person_unknown.png" class="foto-perfil" alt="João">
+            <div class="info">
+                <span class="grau">Bisneto</span>
+                <div class="nome">João Baptista</div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- Este fecho no final garante que os filhos pertencem a este ramo -->
+    
+
+			         <!-- Fillho DE AURELIO BAPTISTA -->
+
+
+
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_unknown.png" class="foto-perfil" alt="Alvaro">
+                    <div class="info">
+                        <span class="grau">Neto</span>
+                        <div class="nome">Álvaro Baptista</div>
+						<div class="datas-dados">N.      <br>📍 </div>
+                    </div>
+                </div>	
+			</div>	
+
+
+
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_unknown.png" class="foto-perfil" alt="João">
+                    <div class="info">
+                        <span class="grau">Neto</span>
+                        <div class="nome">João Baptista</div>
+						<div class="datas-dados">N.    (†)  <br>📍 </div>
+                    </div>
+                </div>	
+            </div>
+      			
+				
+
+<div class="ramo">
+    <!-- Bloco da Mãe (Teresa) -->
+    <div class="bloco-familiar secundario">
+        <img src="fotos/teresa_baptista.jpg" class="foto-perfil" alt="Teresa">
+        <div class="info">
+            <span class="grau">Neta</span>
+            <div class="nome">Teresa Baptista Lopes</div>
+            <div class="datas-dados">N. 1954 (†)  Casamento com  <br> </div>
+        </div>
+    </div>
+
+    <!-- Bloco da Filha (Carla) -->
+    <div class="ramo">
+        <div class="bloco-familiar descendente">
+            <img src="fotos/person_female.png" class="foto-perfil" alt="Carla Camacho">
+            <div class="info">
+                <span class="grau">Bisneta</span>
+                <div class="nome">Carla A. Baptista Camacho</div>
+            </div>
+        </div>
+
+        <!-- FILHAS DE CARLA CAMACHO (Trisnetas) -->
+        <!-- Inseridas aqui dentro para manter a hierarquia familiar correta -->
+        <div class="ramo">
+            <div class="bloco-familiar descendente">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Ana">
+                <div class="info">
+                    <span class="grau">Trisneta</span>
+                    <div class="nome">Ana Camacho</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar descendente">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Daniela">
+                <div class="info">
+                    <span class="grau">Trisneta</span>
+                    <div class="nome">Daniela Camacho</div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- 1º: Fecha o sub-ramo da Carla Camacho e filhas -->
+
+</div> <!-- Fecha o ramo principal da Teresa e de toda a sua descendência -->
+</div> <!-- 3º: FECHA COMPLETAMENTE A LINHAGEM 1 (Aurélio da Silva) -->
+
+
+             <!-- LINHAGEM 2: Ione BAPTISTA -->
+<!-- LINHAGEM 2: Ione BAPTISTA -->
+<div class="ramo">
+    <div class="bloco-familiar secundario">
+        <img src="fotos/person_female.png" class="foto-perfil" alt="Ione">
+        <div class="info">
+            <span class="grau">Filha</span>
+            <div class="nome">Ione Baptista</div>
+            <div class="datas-dados">N.1927 <br> Lubango, Angola &nbsp; Casamento</div>
+        </div>
+    </div>
+
+    <!-- FILHO DE IONE BAPTISTA (Neto) -->
+    <div class="ramo">
+        <div class="bloco-familiar descendente">
+            <img src="fotos/jose_almeida.jpg" class="foto-perfil" alt="José Manuel">
+            <div class="info">
+                <span class="grau">Neto</span>
+                <div class="nome">José Manuel Baptista Almeida</div>
+            </div>
+        </div>
+
+        <!-- FILHA DE JOSÉ MANUEL (Bisneta) -->
+        <!-- Inserida aqui dentro para manter a hierarquia familiar correta -->
+        <div class="ramo">
+            <div class="bloco-familiar descendente">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Ione Almeida">
+                <div class="info">
+                    <span class="grau">Bisneta</span>
+                    <div class="nome">Ione Almeida</div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fecha o ramo do José Manuel e da sua filha -->
+
+</div> <!-- Fecha o ramo principal da Ione Baptista e de toda a sua descendência -->
+
+
+				
+              <!-- LINHAGEM 3: Mariana BAPTISTA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_female.png" class="foto-perfil" alt="Mariana">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Mariana Baptista</div>
+						<div class="datas-dados">N.1929     <br>📍 Lubango, Angola 💍 Casamento</div>
+                    </div>
+                </div>           
+            </div>    
+             <!-- LINHAGEM 4: Maria Juliana BAPTISTA -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/person_female.png" class="foto-perfil" alt="Maria Juliana">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Maria Juliana Baptista</div>
+						<div class="datas-dados">N.     <br>📍 Lubango, Angola 💍 Casamento</div>
+                    </div>
+                </div>
+    <!-- FILHA DE MARIA JULIANA BAPTISTA (Neta) -->
+    <div class="ramo">
+        <div class="bloco-familiar descendente">
+            <img src="fotos/person_female.png" class="foto-perfil" alt="Maria Gomes">
+            <div class="info">
+                <span class="grau">Neta</span>
+                <div class="nome">Maria Gomes</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+			<p><a href="../index.html" class="btn-voltar">⬅ Voltar à Página Principal</a></p>
+
+</body>
+</html>		

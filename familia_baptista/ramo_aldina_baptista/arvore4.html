@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-bottom: 5px; 
+            font-size: 1.8em;
+        }
+        .subtitulo {
+            text-align: center; 
+            color: #2c3e50; 
+            font-size: 1.1em; 
+            font-weight: bold; 
+            margin-top: 10px; 
+            margin-bottom: 30px;
+        }
+        .creditos {
+            padding: 5px; 
+            margin: 0; 
+            font-family: sans-serif;
+            color: #7f8c8d;
+            text-align: center;
+        }
+
+        /* CONTENTOR DAS DUAS ÁRVORES PARALELAS */
+        .contentor-arvores {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 10px;
+        }
+
+        /* Estrutura de cada Árvore Clássica */
+        .coluna-arvore {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1 1 450px;
+            max-width: 600px;
+        }
+
+        .seccao-geracao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* Linha conetora vertical clássica entre gerações */
+        .seccao-geracao::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #bdc3c7;
+        }
+        .seccao-geracao:last-child::after {
+            display: none;
+        }
+
+        .bloco-casal {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .bloco-familiar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border: 2px solid #27ae60;   
+            border-radius: 6px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            width: 100%;
+            max-width: 240px;
+        }
+        
+        .foto-perfil {
+            width: 45px;
+            height: 55px;
+            object-fit: cover;
+            border: 1px solid #27ae60;
+            margin-right: 10px;
+            background-color: #eee;
+        }
+        
+        .info {
+            text-align: left;
+            white-space: normal; 
+        }
+        .info .grau {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+        }
+        .info .nome {
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #000;
+        }
+        .info .detalhes, .info .datas-dados {
+            font-size: 0.75em;
+            color: #444;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        /* CAIXAS DE DESTAQUE PARA IRMÃOS IMPORTANTES */
+        .painel-irmaos {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #333;
+            background: #edf2f7;
+            padding: 12px 15px;
+            border-radius: 6px;
+            text-align: left;
+            border: 1px dashed #cbd5e0;
+            line-height: 1.5;
+            width: calc(100% - 30px);
+            max-width: 490px;
+        }
+
+        /* BLOCO DE UNIÃO FINAL */
+        .bloco-uniao-final {
+            margin: 40px auto 20px auto;
+            max-width: 600px;
+            background: #ffffff;
+            border: 3px double #e74c3c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="creditos">@Luis Borges</p>
+    <h1>Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <p class="subtitulo">Ramo Isabel Baptista Carneiro</p>
+
+    <div class="contentor-arvores">
+
+        <!-- ================================================================= -->
+        <!-- ÁRBORE 1: LINHAGEM DA MADEIRA (ANTEPASSADOS DE ALDINA BAPTISTA)   -->
+        <!-- ================================================================= -->
+        <div class="coluna-arvore">
+            <h2 style="font-size: 1.2em; color: #2c3e50; margin-top: 0; border-bottom: 2px solid #27ae60; padding-bottom: 5px; width: 100%; text-align: center;">Linhagem da Madeira</h2>
+
+            <!-- GERAÇÃO 1: AVÓS PATERNOS E MATERNOS DE ANTÓNIO -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avô Pat. (António)</span>
+                            <div class="nome">[Pai de Domingos]</div>
+                            <div class="datas-dados">📍 Camacha, Madeira</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avó Pat. (António)</span>
+                            <div class="nome">Lourença Marques</div>
+                            <div class="datas-dados">📍 Camacha, Madeira</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloco-casal" style="margin-top: 5px;">
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avô Mat. (António)</span>
+                            <div class="nome">Manoel Corrêa</div>
+                            <div class="datas-dados">📍 Camacha, Madeira</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avó Mat. (António)</span>
+                            <div class="nome">Jacintha de Nobrega</div>
+                            <div class="datas-dados">📍 Camacha, Madeira</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERAÇÃO 2: PAIS DE ANTÓNIO E PAIS DE MARIA -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pai">
+                        <div class="info">
+                            <span class="grau">Pai de António</span>
+                            <div class="nome">Domingos Baptista</div>
+                            <div class="datas-dados">📍 Sítio Casais d'Além</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_female.png" class="foto-perfil" alt="Mãe">
+                        <div class="info">
+                            <span class="grau">Mãe de António</span>
+                            <div class="nome">Helena de Nobrega</div>
+                            <div class="datas-dados">📍 Sítio Casais d'Além</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloco-casal" style="margin-top: 8px;">
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pai">
+                        <div class="info">
+                            <span class="grau">Pai de Maria</span>
+                            <div class="nome">Jose Teixeira de Sousa</div>
+                            <div class="datas-dados">📍 Camacha, Madeira</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="background-color: #fcf8e3; border-color: #f39c12;">
+                        <img src="fotos/person_female.png" class="foto-perfil" alt="Mãe" style="border-color: #f39c12;">
+                        <div class="info">
+                            <span class="grau" style="color: #d35400;">Mãe de Maria</span>
+                            <div class="nome">Maria de Jesus</div>
+                            <div class="datas-dados">✟ Falecida antes de 1879</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERAÇÃO 3: CASAL ANTÓNIO BAPTISTA & MARIA JESUS TEIXEIRA -->
+             <!-- GERAÇÃO 3: CASAL ANTÓNIO BAPTISTA & MARIA JESUS TEIXEIRA -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar" style="border-color: #2980b9; background-color: #f0f4f8;">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="António" style="border-color: #2980b9;">
+                        <div class="info">
+                            <span class="grau" style="color: #2980b9;">Casal Pais — Marido</span>
+                            <div class="nome">António Baptista</div>
+                            <div class="datas-dados">📅 N: 27/12/1865</div>
+                            <div class="detalhes">💍 Casamento: 02/09/1879</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #2980b9; background-color: #f0f4f8;">
+                        <img src="fotos/person_female.png" class="foto-perfil" alt="Maria" style="border-color: #2980b9;">
+                        <div class="info">
+                            <span class="grau" style="color: #2980b9;">Casal Pais — Esposa</span>
+                            <div class="nome">Maria Jesus Teixeira</div>
+                            <div class="datas-dados">📅 N: 1868</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IRMÃOS IMPORTANTES DA ALDINA -->
+                <div class="painel-irmaos">
+                    <strong>Irmãos de Aldina (Filhos de António e Maria):</strong><br>
+                    • 1. Maria Galdina — 📅 N: ~1890/1891<br>
+                    • 2. Isabel Carneiro — 📅 N: ~1892<br>
+                    • 3. Augusta Quental — 📅 N: ~1893<br>
+                    • 4. António Baptista — 📅 N: 1894 <i>(Mãe com 26 anos)</i><br>
+                    • 5. João Baptista — 📅 N: ~1896–1904<br>
+                    • 6. José Baptista — 📅 N: ~1896–1905<br>
+                    • 7. Raul Baptista — 📅 N: 1906 <i>(Mãe com 38 anos)</i><br>
+                    <span style="color: #7f8c8d; font-size: 0.9em; display:block; margin: 3px 0; border-top: 1px dashed #cbd5e0; padding-top: 3px;">Nascidos na década de 1910:</span>
+                    • 9. Cristina (Maguta) — 📅 N: pós-1908<br>
+                    • 10. Maria — 📅 N: pós-1908<br>
+                    • 11. Armando — 📅 N: pós-1908
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- ÁRBORE 2: LINHAGEM DE AVEIRO (ANTEPASSADOS DE MANOEL MARTINS BORGES) -->
+        <!-- ================================================================= -->
+        <div class="coluna-arvore">
+            <h2 style="font-size: 1.2em; color: #2c3e50; margin-top: 0; border-bottom: 2px solid #27ae60; padding-bottom: 5px; width: 100%; text-align: center;">Linhagem de Aveiro / Vale de Cambra</h2>
+
+            <!-- GERAÇÃO 1: TRISAVÓS E AVÓS MATERNOS -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar" style="border-color: #27ae60; background-color: #f4faf6;">
+                        <div class="info">
+                            <span class="grau" style="color: #27ae60;">Trisavô / Patriarca</span>
+                            <div class="nome">Jozé Martins de Sam Thiago</div>
+                            <div class="datas-dados">📍 Ermida, Sever do Vouga</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #27ae60; background-color: #f4faf6;">
+                        <div class="info">
+                            <span class="grau" style="color: #27ae60;">Trisavó Paterna</span>
+                            <div class="nome">Antónia Maria de Jezus</div>
+                            <div class="datas-dados">📍 Ermida, Sever do Vouga</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloco-casal" style="margin-top: 5px;">
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avô Materno</span>
+                            <div class="nome">Jozé Tavares da Silva</div>
+                            <div class="datas-dados">📍 Vila Cova</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #7f8c8d;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Avó Materna</span>
+                            <div class="nome">Roza Tavares e Martins</div>
+                            <div class="datas-dados">📍 Vila Cova</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERAÇÃO 2: BISAVÓS E JANELAS DE TIOS-AVÓS -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pai">
+                        <div class="info">
+                            <span class="grau">Bisavô</span>
+                            <div class="nome">Joaquim M. Borges de Santiago</div>
+                            <div class="datas-dados">📅 N: 21/11/1827 (Ermida)</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_female.png" class="foto-perfil" alt="Mãe">
+                        <div class="info">
+                            <span class="grau">Bisavó</span>
+                            <div class="nome">Rozalia Maria Tavares M. Silva</div>
+                            <div class="datas-dados">📍 Vila Cova, Junqueira</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Janelas Laterais de Tios-Avós Padrinhos -->
+                <div class="bloco-casal" style="margin-top: 8px;">
+                    <div class="bloco-familiar" style="border-color: #7f8c8d; background-color: #fdfefe;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Tio-Avô Padrinho</span>
+                            <div class="nome" style="font-size:0.85em;">David Martins S. T. S. Borges</div>
+                            <div class="datas-dados">📍 Ermida | Solteiro, Lavrador</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #7f8c8d; background-color: #fdfefe;">
+                        <div class="info">
+                            <span class="grau" style="color: #7f8c8d;">Tio-Avô Padrinho</span>
+                            <div class="nome" style="font-size:0.85em;">Delfim Martins S. S. Borges</div>
+                            <div class="datas-dados">📍 Cornelho | Solteiro, Lavrador</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IRMÃOS IMPORTANTES DO ALBINO -->
+                <div class="painel-irmaos">
+                    <strong>Filhos de Joaquim e Rozalia (Irmãos de Albino):</strong><br>
+                    • Manuel (1º) — 📅 n. 1861 <i>(Faleceu criança • Pad: Tio David)</i><br>
+                    • Delfim Martins Borges — 📅 n. 16/05/1864 <i>(Pad: Tio Delfim)</i><br>
+                    • Francisco Martins Borges — 📅 n. 02/04/1871<br>
+                    • Manuel Martins Borges (2º) — 📅 n. 09/07/1876 <i>(Em homenagem)</i>
+                </div>
+            </div>
+
+            <!-- GERAÇÃO 3: CASAL ALBINO MARTINS BORGES & MARIA TAVARES -->
+            <div class="seccao-geracao">
+                <div class="bloco-casal">
+                    <div class="bloco-familiar" style="border-color: #2980b9; background-color: #f0f4f8;">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="Albino" style="border-color: #2980b9;">
+                        <div class="info">
+                            <span class="grau" style="color: #2980b9;">Casal Pais — Marido</span>
+                            <div class="nome">Albino Martins Borges</div>
+                            <div class="datas-dados">📅 N: 06/02/1867 — F: 20/05/1943</div>
+                            <div class="detalhes">🕊️ Pad: Avô Jozé Martins</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar" style="border-color: #2980b9; background-color: #f0f4f8;">
+                        <img src="fotos/person_female.png" class="foto-perfil" alt="Maria" style="border-color: #2980b9;">
+                        <div class="info">
+                            <span class="grau" style="color: #2980b9;">Casal Pais — Esposa</span>
+                            <div class="nome">Maria Tavares da Silva</div>
+                            <div class="datas-dados">📅 N: 13/08/1871 — F: 01/02/1970</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IRMÃOS IMPORTANTES DO MANOEL -->
+                <div class="painel-irmaos">
+                    <strong>Filhos de Albino e Maria (Irmãos de Manoel):</strong><br>
+                    • José Maria Martins Borges
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fecha o contentor das duas árvores paralelas -->
+
+
+    <!-- ================================================================= -->
+    <!-- SECÇÃO FINAL EM DESTAQUE: A UNIÃO DEFINITIVA DO CASAL EM ANGOLA   -->
+    <!-- ================================================================= -->
+
+    <div class="bloco-uniao-final">
+        <h3 style="margin: 0 0 15px 0; color: #e74c3c; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1px;">💍 O Encontro das Duas Linhagens</h3>
+        
+        <div style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <!-- O Noivo Emigrante -->
+            <div class="bloco-familiar" style="border-color: #e74c3c; background-color: #fff5f5; max-width: 260px;">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Manoel Martins Borges" style="border-color: #e74c3c;">
+                <div class="info">
+                    <span class="grau" style="color: #e74c3c;">Marido / Emigrante</span>
+                    <div class="nome">Manoel Martins Borges</div>
+                    <div class="datas-dados">📅 N: 22/02/1897 — F: 31/07/1963</div>
+                    <div class="detalhes" style="color: #7f8c8d; font-style: italic;">🌍 Emigrou em 1911 (14 anos)</div>
+                </div>
+            </div>
+
+            <!-- A Noiva -->
+            <div class="bloco-familiar" style="border-color: #e74c3c; background-color: #fff5f5; max-width: 260px;">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Aldina Baptista" style="border-color: #e74c3c;">
+                <div class="info">
+                    <span class="grau" style="color: #e74c3c;">Esposa</span>
+                    <div class="nome">Gualdina Baptista Borges (Aldina)</div>
+                    <div class="datas-dados">📅 N: 01/02/1908 — F: 23/04/1988</div>
+                    <div class="detalhes" style="color: #7f8c8d; font-style: italic;">8.ª filha (Mãe c/ 40 anos)</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 15px; font-size: 0.9em; line-height: 1.5; color: #555; border-top: 1px solid #f5c6cb; padding-top: 12px;">
+            🕊️ Casaram-se solenemente a <strong>11 de Agosto de 1928 no Lubango (Huíla, Angola)</strong>, selando a união histórica e o legado comum destas duas grandes famílias.
+        </div>
+    </div>
+
+</body>
+</html>
+

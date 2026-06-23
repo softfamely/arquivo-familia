@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 40px;
+            overflow-x: auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 40px;
+        }
+        
+		    h2 {
+        font-size: 1.1rem;
+        color: #475569;
+        margin-bottom: 40px;
+    }
+
+    /* --- NOVAS REGRAS CORRIGIDAS --- */
+    .ancestor-branch {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 40px !important;
+    }
+
+    .ancestors-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+    }
+
+    .ancestor-row {
+        display: flex !important;
+        flex-direction: row !important; /* Força os casais a ficarem lado a lado */
+        gap: 20px !important;
+        justify-content: center !important;
+    }
+
+    .branch-line {
+        width: 2px !important;
+        height: 25px !important;
+        background-color: #cbd5e1 !important; /* Cor cinza suave para combinar */
+        margin: 8px 0 !important;
+    }
+    /* ------------------------------ */
+
+
+    /* Estrutura Base do Organograma */
+    .tree {
+
+		
+        /* Estrutura Base do Organograma */
+        .tree {
+            display: flex;
+            justify-content: center;
+            min-width: max-content;
+            padding: 20px;
+        }
+        .tree ul {
+            padding-top: 20px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+        .tree li {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 7px 0 7px;
+            transition: all 0.5s;
+        }
+
+        /* Linhas Verticais Superiores */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            right: 50%;
+            border-top: 2px solid #94a3b8;
+            width: 50%; 
+            height: 20px;
+        }
+        .tree li::after {
+            right: auto; 
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+        }
+
+        /* Ajustes para nós únicos e extremidades */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        .tree li:only-child { 
+            padding-top: 0;
+        }
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+        .tree li:last-child::before {
+            border-right: 2px solid #94a3b8;
+            border-radius: 0 5px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        /* Linhas conectoras descendentes */
+        .tree ul ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+            width: 0; 
+            height: 20px;
+        }
+
+        /* Contentor de Casal (Lado a Lado) */
+        .couple {
+            display: inline-flex;
+            gap: 2px;
+            background: #cbd5e1;
+            padding: 3px;
+            border-radius: 6px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Design do Cartão */
+        .card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 8px 10px;
+            text-align: left;
+            width: 175px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .card.titular {
+            border: 2px solid #b91c1c;
+            background: #fff5f5;
+        }
+        .role {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #0f172a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .details {
+            font-size: 0.72rem;
+            color: #64748b;
+            margin-top: 3px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <h2>Ramo Aldina Baptista Borges</h2>
+
+    <div class="tree">
+        <ul>
+ <!-- INÍCIO DA ÁRVORE GENEALÓGICA -->
+<!-- INÍCIO DA ÁRVORE GENEALÓGICA -->
+<div class="tree">
+    <ul>
+        <li>
+            <!-- CASAL PRINCIPAL (CONECTORES DO TOPO) -->
+            <div class="couple">
+                
+                <!-- CONTAINER DA ALDINA COM OS SEUS ANCESTRAIS ACIMA -->
+                <div class="ancestor-branch">
+                    <!-- ANCESTRAIS DA ALDINA (SUBIDA) -->
+                    <div class="ancestors-container">
+                        <!-- GERAÇÃO 1: BISAVÓS -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Bisavós Paternos</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">Pai de Domingues</div><div class="details">& Lourença Marques</div></div>
+                            <div class="card"><span class="role">Bisavós Maternos</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">Manoel Corrêa</div><div class="details">& Jacinta Nóbrega</div></div>
+                        </div>
+                        <!-- LINHA DE LIGAÇÃO VIRTUAL -->
+                        <div class="branch-line"></div>
+                        <!-- GERAÇÃO 2: AVÓS -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Avô Materno</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">Domingues Baptista</div><div class="details">Camacha, Madeira</div></div>
+                            <div class="card"><span class="role">Avó Materna</span><img src="fotos/person_female.png" class="foto-perfil"><div class="name">Helena de Nóbrega</div><div class="details">Camacha, Madeira</div></div>
+                        </div>
+                        <div class="branch-line"></div>
+                        <!-- GERAÇÃO 3: PAIS -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Pai de Aldina</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">António Baptista</div><div class="details">N. 27/12/1865<br>Cas: 02/09/1889</div></div>
+                            <div class="card"><span class="role">Mãe de Aldina</span><img src="fotos/maria_teixeira.jpeg" class="foto-perfil" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;"><div class="name">Maria de Jesus F.</div><div class="details">N. Meados/1868</div></div>
+                        </div>
+                        <div class="branch-line"></div>
+                    </div>
+                    
+                    <!-- TITULAR DO RAMO (ALDINA CORRIGIDA) -->
+                    <div class="card titular">
+                        <span class="role">Titular do Ramo</span>
+                        <img src="fotos/aldina_bapt.png" class="foto-perfil" style="display: block; width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin: 0 auto 10px auto;" alt="">
+                        <div class="name">Aldina B. Borges</div>
+                        <div class="details">1908 – 1988<br>Lubango, Angola</div>
+                    </div>
+                </div>
+
+                <!-- CONTAINER DO MANOEL COM OS SEUS ANCESTRAIS ACIMA (AGORA COM CASAIS) -->
+                <div class="ancestor-branch">
+                    <!-- ANCESTRAIS DO MANOEL (SUBIDA) -->
+                    <div class="ancestors-container">
+                        <!-- GERAÇÃO 1: BISAVÓS DO MANOEL -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Bisavô de Manoel</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">Bisavô de Manoel</div><div class="details">A preencher</div></div>
+                            <div class="card"><span class="role">Bisavó de Manoel</span><img src="fotos/person_female.png" class="foto-perfil"><div class="name">Bisavó de Manoel</div><div class="details">A preencher</div></div>
+                        </div>
+                        <div class="branch-line"></div>
+                        <!-- GERAÇÃO 2: AVÓS DO MANOEL -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Avô de Manoel</span><img src="fotos/person_unknown.png" class="foto-perfil"><div class="name">Avô de Manoel</div><div class="details">A preencher</div></div>
+                            <div class="card"><span class="role">Avó de Manoel</span><img src="fotos/person_female.png" class="foto-perfil"><div class="name">Avó de Manoel</div><div class="details">A preencher</div></div>
+                        </div>
+                        <div class="branch-line"></div>
+                        <!-- GERAÇÃO 3: PAIS DO MANOEL -->
+                        <div class="ancestor-row">
+                            <div class="card"><span class="role">Pai de Manoel</span><img src="fotos/albino_borges.jg" class="foto-perfil"><div class="name">Pai de Manoel</div><div class="details">A preencher</div></div>
+                            <div class="card"><span class="role">Mãe de Manoel</span><img src="fotos/person_female.png" class="foto-perfil"><div class="name">Mãe de Manoel</div><div class="details">A preencher</div></div>
+                        </div>
+                        <div class="branch-line"></div>
+                    </div>
+
+                    <!-- CÔNJUGE -->
+                    <div class="card">
+                        <span class="role">Cônjuge</span>
+                        <img src="fotos/manuel_borges.jg" class="foto-perfil"> style="display: block; width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin: 0 auto 10px auto;" alt="">
+                        <div class="name">Manoel M. Borges</div>
+                        <div class="details">1897 — Falecido<br>Vila Cova, Junqueira</div>
+                    </div>
+                </div>
+
+            </div> <!-- FIM DO CASAL -->
+
+
+                                        <!-- GERAÇÃO 5: FILHOS DE ALDINA -->
+                                        <ul>
+                                            
+                                            <!-- FILHA 1: ARLETE BORGES -->
+                                            <li>
+                                                <div class="couple">
+                                                    <div class="card"><span class="role">Filha</span><div class="name">Arlete Borges (†)</div><div class="details">Lubango, Angola</div></div>
+                                                    <div class="card"><span class="role">Cônjuge</span><div class="name">Verânio Jorge (†)</div><div class="details">Lubango, Angola</div></div>
+                                                </div>
+                                                <!-- NETOS DE ARLETE -->
+                                                <ul>
+                                                    <li>
+                                                        <div class="card"><span class="role">Neto</span><div class="name">Carlos Jorge (1953)</div><div class="details">Lubango, Angola</div></div>
+                                                        <ul>
+                                                            <li><div class="card"><span class="role">Bisneto</span><div class="name">Fábio Jorge</div></div></li>
+                                                            <li><div class="card"><span class="role">Bisneta</span><div class="name">Nisa Jorge</div></div></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="card"><span class="role">Neta</span><div class="name">Paula Jorge (1953)</div><div class="details">Lubango, Angola</div></div>
+                                                        <ul>
+                                                            <li><div class="card"><span class="role">Bisneto</span><div class="name">Daniel Santos</div></div></li>
+                                                            <li><div class="card"><span class="role">Bisneto</span><div class="name">Hugo Santos</div></div></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <!-- FILHA 2: ESTELA SANTIAGO -->
+                                            <li>
+                                                <div class="couple">
+                                                    <div class="card"><span class="role">Filha</span><div class="name">Estela Santiago (†)</div><div class="details">Lubango, Angola</div></div>
+                                                    <div class="card"><span class="role">Cônjuge</span><div class="name">Manuel Santiago (†)</div><div class="details">Vila Cova, V. Cambra</div></div>
+                                                </div>
+                                                <!-- NETOS DE ESTELA -->
+                                                <ul>
+                                                    <li><div class="card"><span class="role">Neta</span><div class="name">Nela Santiago (†)</div><div class="details">Lubango, Angola</div></div></li>
+                                                    <li><div class="card"><span class="role">Neta</span><div class="name">São Santiago (†)</div><div class="details">Lubango, Angola</div></div></li>
+                                                    <li>
+                                                        <div class="card"><span class="role">Neto</span><div class="name">Norberto S. (1949)</div><div class="details">Lubango, Angola</div></div>
+                                                        <ul>
+                                                            <li><div class="card"><span class="role">Bisneta</span><div class="name">Katheleen S.</div></div></li>
+                                                            <li><div class="card"><span class="role">Bisneta</span><div class="name">Gisela S.</div></div></li>
+                                                            <li><div class="card"><span class="role">Bisneta</span><div class="name">Nádia S.</div></div></li>
+                                                            <li><div class="card"><span class="role">Bisneta</span><div class="name">Liliana S.</div></div></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <!-- FILHO 3: ARLINDO BORGES -->
+                                            <li>
+                                                <div class="couple">
+                                                    <div class="card"><span class="role">Filho</span><div class="name">Arlindo Borges (†)</div><div class="details">1937 — 1987<br>Lubango, Angola</div></div>
+                                                    <div class="card"><span class="role">Cônjuge</span><div class="name">Violante Borges</div><div class="details">S. Bart. de Messines</div></div>
+                                                </div>
+                                                <!-- NETOS DE ARLINDO -->
+                        <!-- NETOS DE ARLINDO -->
+                        <ul>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">José Manuel R. B. (1962)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Eliana Borges</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">José Diogo Borges</div></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">Luis Borges (1964)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">Daniel Borges</div></div></li>
+                                </ul>
+                            </li>
+                        </ul>

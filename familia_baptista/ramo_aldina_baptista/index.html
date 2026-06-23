@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<p style="padding: 10px; margin: 0; font-family: sans-serif;">@Luis Borges</p>
+
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6; /* Cinzento claro da imagem */
+            color: #333;
+            padding: 30px;
+            margin: 0;
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        /* Contentor Principal da Árvore Vertical */
+        .arvore-vertical {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        /* Grupos de Ramos */
+        .ramo {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        /* Linhas verticais à esquerda */
+        .ramo::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -10px;
+            border-left: 2px solid #333;
+        }
+        .ramo:last-child::before {
+            bottom: auto;
+            height: 25px;
+        }
+        
+        /* Linhas horizontais conetoras */
+        .ramo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 22px;
+            border-top: 2px solid #333;
+        }
+        
+        /* Blocos Familiares - Fundo Branco e Contorno Verde */
+        .bloco-familiar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff; /* Branco Puro */
+            border: 2px solid #27ae60;   /* Verde das suas caixas */
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        .foto-perfil {
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #27ae60;
+            margin-right: 15px;
+            background-color: #eee;
+        }
+        
+        .info {
+            text-align: left;
+        }
+        .info .grau {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+        }
+        .info .nome {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #000;
+        }
+        .info .detalhes {
+            font-size: 0.8em;
+            color: #444;
+            margin-top: 2px;
+        }
+        
+        .btn-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <p class="subtitulo" style="text-align: center; color: #2c3e50; font-size: 1.2em; font-weight: bold; margin-top: 10px; margin-bottom: 30px;">Ramo Aldina Baptista Borges</p>
+
+
+    <div class="arvore-vertical">
+
+        <!-- ================= GERAÇÃO 1: BISAVÓS MATERNOS ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Bisavós">
+                <div class="info">
+                    <span class="grau">Bisavós Paternos</span>
+                    <div class="nome">Pai de Domingues & Lourença Marques</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Bisavós">
+                <div class="info">
+                    <span class="grau">Bisavós Maternos</span>
+                    <div class="nome">Manoel Corrêa & Jacinta Nóbrega</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 2: AVÓS MATERNOS E PATERNOS ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Avós">
+                <div class="info">
+                    <span class="grau">Avós Maternos</span>
+                    <div class="nome">Domingues Baptista</div>
+					<div class="detalhes">Natural do Sítio dos Casais d'Além, Freguesia da Camacha, Santa Cruz, Madeira</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_female.png" class="foto-perfil" alt="Avós">
+                <div class="info">
+                    <span class="grau">Avós Maternos</span>
+                    <div class="nome">Helena de Nóbrega</div>
+                    <div class="detalhes">Natural do Sítio dos Casais d'Além, Freguesia da Camacha, Santa Cruz, Madeira</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 3: PAIS DE ALDINA E MANOEL ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/person_unknown.png" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Pai de Aldina</span>
+                    <div class="nome">António Baptista</div>
+					<div class="detalhes">(❤ N. 27/12/1865 / †) 💍 Casou a 02/09/1889 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/maria_teixeira.jpeg" class="foto-perfil" alt="Pais">
+                <div class="info">
+                    <span class="grau">Mãe de Aldina</span>
+                    <div class="nome">Maria de Jesus Feixeira</div>
+					<div class="detalhes">(❤ N. Meados/1868 / †)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GERAÇÃO 4: TRONCO PRINCIPAL ================= -->
+        <div class="ramo">
+            <div class="bloco-familiar">
+                <img src="fotos/aldina_baptista.png" class="foto-perfil" alt="Aldina">
+                <div class="info">
+                    <span class="grau"></span>
+                    <div class="nome">Aldina Baptista Borges</div>
+					<div class="datas-dados">1908 - 1988<br>📍 Lubango, Angola<br>💍 Casamento: 1928</div>
+                </div>
+            </div>
+            <div class="bloco-familiar">
+                <img src="fotos/manuel_borges.jpg" class="foto-perfil" alt="Manoel">
+                <div class="info">
+                    <div class="nome">Manoel Martins Borges</div>
+					<div class="datas-dados">1897 - Falecido<br>📍 Vila Cova, Junqueira</div>
+                </div>
+            </div>
+
+            <!-- ================= FILHOS, NETOS E BISNETOS (SUB-RAMOS) ================= -->
+            
+            <!-- LINHAGEM 1: ARLETE -->
+            <div class="ramo">
+                <div class="bloco-familiar secundario">
+                    <img src="fotos/arlete_jorge.jpg" class="foto-perfil" alt="Arlete">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Arlete Borges</div>
+						<div class="datas-dados">..... - Falecida<br>📍 Lubango, Angola</div>
+                    </div>
+                </div>
+				<div class="bloco-familiar secundario">
+                    <img src="fotos/veranio_jorge.jpg" class="foto-perfil" alt="Arlete">
+                    <div class="info">
+                        <span class="grau">Cônjuge</span>
+                        <div class="nome">Verânio Jorge</div>
+						<div class="datas-dados">...... - Falecido<br>📍 Lubango / Angola</div>
+                    </div>
+                </div>
+                
+                <div class="ramo">
+                    <div class="bloco-familiar descendente">
+                        <img src="fotos/carlos_f_jorge.jpg" class="foto-perfil" alt="Carlos">
+                        <div class="info"><span class="grau">Neto</span><div class="nome">Carlos Jorge  -  1953 📍 Lubango / Angola</div></div>
+				
+                    </div>
+                    <div class="ramo">
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_unknown.png" class="foto-perfil" alt="Fábio">
+                            <div class="info"><span class="grau">Bisneto</span><div class="nome">Fábio Jorge</div></div>
+                        </div>
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Nisa">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Nisa Jorge</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ramo">
+                    <div class="bloco-familiar descendente">
+                        <img src="fotos/paula_jorge.jpg" class="foto-perfil" alt="Paula">
+                        <div class="info"><span class="grau">Neta</span><div class="nome">Paula Jorge  -  1953 📍 Lubango / Angola</div></div>
+                    </div>
+                    <div class="ramo">
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_unknown.png" class="foto-perfil" alt="Daniel">
+                            <div class="info"><span class="grau">Bisneto</span><div class="nome">Daniel Santos</div></div>
+                        </div>
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_unknown.png" class="foto-perfil" alt="Hugo">
+                            <div class="info"><span class="grau">Bisneto</span><div class="nome">Hugo Santos</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINHAGEM 2: ESTELA -->
+            <div class="ramo">
+                <!-- Caixa da Estela -->
+                <div class="bloco-familiar">
+                    <img src="fotos/estela_santiago.jpg" class="foto-perfil" alt="Estela">
+                    <div class="info">
+                        <span class="grau">Filha</span>
+                        <div class="nome">Estela Santiago (†)</div>
+						<div class="datas-dados">N.     <br>📍 Lubango / Angola</div>
+                    </div>
+                </div>
+                <!-- Caixa do Marido (Adicionada) -->
+                <div class="bloco-familiar" style="margin-top: -4px;">
+                    <img src="fotos/manuel_santiago.jpg" class="foto-perfil" alt="Manuel">
+                    <div class="info">
+                        <span class="grau">Cônjuge</span>
+                        <div class="nome">Manuel Santiago (†)</div>
+						<div class="datas-dados">N.     <br>📍 Vila Cova, Vale de Cambra</div>
+                    </div>
+                </div>
+                                <div class="ramo">
+                    <!-- Neta 1 -->
+                    <div class="bloco-familiar">
+                        <img src="fotos/nela_santiago.jpg" class="foto-perfil" alt="Nela">
+                        <div class="info"><span class="grau">Neta</span><div class="nome">Nela Santiago  📍 Lubango / Angola (†)</div></div>
+                    </div>
+                    
+                    <!-- Neta 2 -->
+                    <div class="bloco-familiar">
+                        <img src="fotos/sao_santiago.jpg" class="foto-perfil" alt="São">
+                        <div class="info"><span class="grau">Neta</span><div class="nome">São Santiago 📍 Lubango / Angola (†)</div></div>
+                    </div>
+                    
+                    <!-- Neto 3 -->
+                    <div class="bloco-familiar">
+                        <img src="fotos/norberto_santiago.jpg" class="foto-perfil" alt="Norberto">
+                        <div class="info"><span class="grau">Neto</span><div class="nome">Norberto Santiago  N.1949 📍 Lubango / Angola</div></div>
+	
+                    </div>
+                        
+                    <!-- Sub-ramo das 4 Bisnetas (Filhas do Norberto) -->
+                    <div class="ramo">
+                        <div class="bloco-familiar">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Katheleen">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Katheleen S.</div></div>
+                        </div>
+                        <div class="bloco-familiar">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Gisela">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Gisela S.</div></div>
+                        </div>
+                        <div class="bloco-familiar">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Nádia">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Nádia S.</div></div>
+                        </div>
+                        <div class="bloco-familiar">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Liliana">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Liliana S.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LINHAGEM 3: Arlindo Borges -->
+            <div class="ramo">
+                <!-- Caixa da Estela -->
+                <div class="bloco-familiar">
+                    <img src="fotos/arlindo_borges.jpeg" class="foto-perfil" alt="Arlindo">
+                    <div class="info">
+                        <span class="grau">Filho</span>
+                        <div class="nome">Arlindo Borges (†)</div>
+						<div class="datas-dados">N.1937 † 1987  <br>📍 Lubango / Angola</div>
+                    </div>
+                </div>
+                <!-- Caixa do Mulher (Adicionada) -->
+                <div class="bloco-familiar" style="margin-top: -4px;">
+                    <img src="fotos/violante_borges.jpg" class="foto-perfil" alt="Violante">
+                    <div class="info">
+                        <span class="grau">Cônjuge</span>
+                        <div class="nome">Violante Borges</div>
+						<div class="datas-dados">N.     <br>📍 São Bartolomeu de Messines</div>
+                    </div>
+                </div>
+
+                
+                <div class="ramo">
+                    <div class="bloco-familiar descendente">
+                        <img src="fotos/jose_manuel_borges.jpg" class="foto-perfil" alt="Carlos">
+                        <div class="info"><span class="grau">Neto</span><div class="nome">José Manuel R. Borges  -  1962 📍 Lubango / Angola</div></div>
+				
+                    </div>
+                    <div class="ramo">
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_female.png" class="foto-perfil" alt="Eliana Borges">
+                            <div class="info"><span class="grau">Bisneta</span><div class="nome">Eliana Borges</div></div>
+                        </div>
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/person_unknown.png" class="foto-perfil" alt="José Diogo">
+                            <div class="info"><span class="grau">Bisneto</span><div class="nome">José Diogo Borges</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ramo">
+                    <div class="bloco-familiar descendente">
+                        <img src="fotos/luis_alberto_borges.jpg" class="foto-perfil" alt="Luis">
+                        <div class="info"><span class="grau">Neto</span><div class="nome">Luis Borges  -  1964 📍 Lubango / Angola</div></div>
+                    </div>
+                    <div class="ramo">
+                        <div class="bloco-familiar descendente" style="background-color: #fff;">
+                            <img src="fotos/luis_daniel_borges.jpg" class="foto-perfil" alt="Daniel">
+                            <div class="info"><span class="grau">Bisneto</span><div class="nome">Daniel Borges</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<p><a href="../index.html" class="btn-voltar">⬅ Voltar à Página Principal</a></p>
+
+</body>
+</html>

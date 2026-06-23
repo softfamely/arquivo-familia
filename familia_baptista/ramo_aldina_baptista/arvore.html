@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica Horizontal - Família Baptista Borges</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 40px;
+            overflow-x: auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 40px;
+        }
+        
+        /* Estrutura do Gráfico */
+        .tree {
+            display: flex;
+            justify-content: center;
+            min-width: max-content;
+            padding: 20px;
+        }
+        .tree ul {
+            padding-top: 20px; 
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+        .tree li {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 10px 0 10px;
+            transition: all 0.5s;
+        }
+
+        /* Linhas Conectoras Verticais superiores */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            right: 50%;
+            border-top: 2px solid #94a3b8;
+            width: 50%; 
+            height: 20px;
+        }
+        .tree li::after {
+            right: auto; 
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+        }
+
+        /* Remover conectores de extremidade */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        .tree li:only-child { 
+            padding-top: 0;
+        }
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+        .tree li:last-child::before {
+            border-right: 2px solid #94a3b8;
+            border-radius: 0 5px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        /* Linhas conectoras que descem dos pais */
+        .tree ul ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+            width: 0; 
+            height: 20px;
+        }
+
+        /* Contentores dos Casais */
+        .couple {
+            display: inline-flex;
+            gap: 4px;
+            background: #e2e8f0;
+            padding: 4px;
+            border-radius: 6px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Cartão Individual */
+        .card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 8px 12px;
+            text-align: left;
+            width: 190px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .card.titular {
+            border: 2px solid #b91c1c;
+            background: #fff5f5;
+        }
+        .role {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #0f172a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .details {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 3px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <h2>Ramo Aldina Baptista Borges</h2>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <!-- GERAÇÃO 1: TITULAR -->
+                <div class="couple">
+                    <div class="card titular">
+                        <span class="role">Titular do Ramo</span>
+                        <div class="name" title="Aldina Baptista Borges">Aldina B. Borges</div>
+                        <div class="details">1908 — 1988<br>Lubango, Angola</div>
+                    </div>
+                    <div class="card">
+                        <span class="role">Cônjuge</span>
+                        <div class="name" title="Manoel Martins Borges">Manoel M. Borges</div>
+                        <div class="details">1897 — Falecido<br>Vila Cova</div>
+                    </div>
+                </div>
+
+                <!-- GERAÇÃO 2: FILHOS -->
+                <ul>
+                    <!-- FILHA 1: ARLETE -->
+                    <li>
+                        <div class="couple">
+                            <div class="card">
+                                <span class="role">Filha</span>
+                                <div class="name">Arlete Borges (†)</div>
+                                <div class="details">Lubango, Angola</div>
+                            </div>
+                            <div class="card">
+                                <span class="role">Cônjuge</span>
+                                <div class="name">Verânio Jorge (†)</div>
+                                <div class="details">Lubango, Angola</div>
+                            </div>
+                        </div>
+                        <!-- NETOS DE ARLETE -->
+                        <ul>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">Carlos Jorge (1953)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">Fábio Jorge</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Nisa Jorge</div></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neta</span>
+                                    <div class="name">Paula Jorge (1953)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">Daniel Santos</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">Hugo Santos</div></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- FILHA 2: ESTELA -->
+                    <li>
+                        <div class="couple">
+                            <div class="card">
+                                <span class="role">Filha</span>
+                                <div class="name">Estela Santiago (†)</div>
+                                <div class="details">Lubango, Angola</div>
+                            </div>
+                            <div class="card">
+                                <span class="role">Cônjuge</span>
+                                <div class="name">Manuel Santiago (†)</div>
+                                <div class="details">Vila Cova</div>
+                            </div>
+                        </div>
+                        <!-- NETOS DE ESTELA -->
+                        <ul>
+                            <li><div class="card"><span class="role">Neta</span><div class="name">Nela Santiago (†)</div><div class="details">Lubango</div></div></li>
+                            <li><div class="card"><span class="role">Neta</span><div class="name">São Santiago (†)</div><div class="details">Lubango</div></div></li>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">Norberto S. (1949)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Katheleen S.</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Gisela S.</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Nádia S.</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Liliana S.</div></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- FILHO 3: ARLINDO -->
+                    <li>
+                        <div class="couple">
+                            <div class="card">
+                                <span class="role">Filho</span>
+                                <div class="name">Arlindo Borges (†)</div>
+                                <div class="details">1937 — 1987<br>Lubango, Angola</div>
+                            </div>
+                            <div class="card">
+                                <span class="role">Cônjuge</span>
+                                <div class="name">Violante Borges</div>
+                                <div class="details">S. Bartolomeu de Messines</div>
+                            </div>
+                        </div>
+                        <!-- NETOS DE ARLINDO -->
+                        <ul>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">José Manuel R. Borges (1962)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneta</span><div class="name">Eliana Borges</div></div></li>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">José Diogo Borges</div></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="card">
+                                    <span class="role">Neto</span>
+                                    <div class="name">Luis Borges (1964)</div>
+                                    <div class="details">Lubango, Angola</div>
+                                </div>
+                                <ul>
+                                    <li><div class="card"><span class="role">Bisneto</span><div class="name">Daniel Borges</div></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+					

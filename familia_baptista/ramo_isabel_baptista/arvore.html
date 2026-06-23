@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+      <p style="padding: 10px; margin: 0; font-family: sans-serif;">@Luis Borges</p
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore Genealógica - Família Baptista Borges</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 30px;
+            margin: 0;
+            overflow-x: auto; /* Permite scroll horizontal se a árvore alargar muito */
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-bottom: 5px; 
+        }
+        .subtitulo {
+            text-align: center; 
+            color: #2c3e50; 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            margin-top: 10px; 
+            margin-bottom: 40px;
+        }
+
+        /* --- NOVA ESTRUTURA VERTICAL EM PIRÂMIDE --- */
+        .arvore-vertical {
+            text-align: center;
+            white-space: nowrap;
+            padding: 20px;
+        }
+
+        .arvore-vertical ul {
+            padding-top: 30px; /* Distância vertical entre gerações */
+            position: relative;
+            transition: all 0.5s;
+            display: inline-flex;
+            justify-content: center;
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .arvore-vertical li {
+            float: left; 
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 30px 10px 0 10px; /* Espaço para as linhas conetoras */
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Linhas Verticais de Descida (Ramos superiores) */
+        .arvore-vertical li::before, .arvore-vertical li::after {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            right: 50%;
+            border-top: 2px solid #333;
+            width: 50%; 
+            height: 30px;
+        }
+        .arvore-vertical li::after {
+            right: auto; 
+            left: 50%;
+            border-left: 2px solid #333;
+        }
+
+        /* Remove linhas que sobram nas extremidades das gerações */
+        .arvore-vertical li:first-child::before, .arvore-vertical li:last-child::after {
+            border: 0 none;
+        }
+        .arvore-vertical li:last-child::before {
+            border-right: 2px solid #333;
+            border-radius: 0 5px 0 0;
+        }
+        .arvore-vertical li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        .arvore-vertical li:only-child::after, .arvore-vertical li:only-child::before {
+            display: none;
+        }
+        .arvore-vertical li:only-child { 
+            padding-top: 0;
+        }
+
+        /* Linha vertical que sai debaixo dos pais */
+        .arvore-vertical ul ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left: 2px solid #333;
+            width: 0; 
+            height: 30px;
+        }
+
+        /* Contentor para agrupar Casais (lado a lado na mesma geração) */
+        .bloco-casal {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Contorno dos Blocos Familiares */
+        .bloco-familiar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border: 2px solid #27ae60;   /* Verde original */
+            border-radius: 6px;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            min-width: 250px;
+            text-align: left;
+        }
+        
+        .foto-perfil {
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #27ae60;
+            margin-right: 15px;
+            background-color: #eee;
+        }
+        
+        .info {
+            text-align: left;
+            white-space: normal; /* Permite que o texto quebre linhas se necessário */
+        }
+        .info .grau {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+        }
+        .info .nome {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #000;
+        }
+        .info .detalhes, .info .datas-dados {
+            font-size: 0.8em;
+            color: #444;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        /* Barra de scroll bonita para telemóveis */
+        body::-webkit-scrollbar { height: 8px; }
+        body::-webkit-scrollbar-track { background: #e0e0e0; border-radius: 4px; }
+        body::-webkit-scrollbar-thumb { background: #27ae60; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>Descendência e Ramificações da Família Baptista (1865 — 2026)</h1>
+    <p class="subtitulo">Ramo Isabel Baptista Carneiro</p>
+
+    <div class="arvore-vertical">
+        <ul>
+            <li>
+                <!-- ================= GERAÇÃO 1: PAIS (TOPO DA ÁRVORE) ================= -->
+                <div class="bloco-casal">
+                    <div class="bloco-familiar">
+                        <img src="fotos/person_unknown.png" class="foto-perfil" alt="António">
+                        <div class="info">
+                            <span class="grau">Pai de Isabel</span>
+                            <div class="nome">António Baptista</div>
+                            <div class="detalhes">(❤ N. 27/12/1865 / †) <br>💍 Casou a 02/09/1889</div>
+                        </div>
+                    </div>
+                    <div class="bloco-familiar">
+                        <img src="fotos/maria_teixeira.jpeg" class="foto-perfil" alt="Maria">
+                        <div class="info">
+                            <span class="grau">Mãe de Isabel</span>
+                            <div class="nome">Maria de Jesus Teixeira</div>
+                            <div class="detalhes">(❤ N. Meados/1868 / †)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= GERAÇÃO 2: TRONCO PRINCIPAL (BAIXO DA G1) ================= -->
+                <ul>
+                    <li>
+                        <div class="bloco-casal">
+                            <div class="bloco-familiar">
+                                <img src="fotos/isabel_carneiro.PNG" class="foto-perfil" alt="Isabel">
+                                <div class="info">
+                                    <span class="grau">Matriarca</span>
+                                    <div class="nome">Isabel Baptista (Carneiro)</div>
+                                    <div class="datas-dados">📍 Lubango, Angola</div>
+                                </div>
+                            </div>
+                            <div class="bloco-familiar">
+                                <img src="fotos/person_unknown.PNG" class="foto-perfil" alt="João">
+                                <div class="info">
+                                    <span class="grau">Cônjuge</span>
+                                    <div class="nome">João Carneiro</div>
+                                    <div class="datas-dados">Falecido</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================= GERAÇÃO 3: FILHOS (ALINHADOS LADO A LADO NO FUNDO) ================= -->
+                        <ul>
+                            <!-- LINHAGEM 1: ALBERTINA -->
+                            <li>
+                                <div class="bloco-familiar">
+                                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Albertina">
+                                    <div class="info">
+                                        <span class="grau">Filha</span>
+                                        <div class="nome">Albertina Carneiro</div>
+                                        <div class="datas-dados">N. - Falecida<br>📍 Lubango, Angola</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- LINHAGEM 2: BELITA -->
+                            <li>
+                                <div class="bloco-familiar">
+                                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Belita">
+                                    <div class="info">
+                                        <span class="grau">Filha</span>
+                                        <div class="nome">Belita</div>
+                                        <div class="datas-dados">N. - Falecida<br>📍 Lubango, Angola</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- LINHAGEM 3: MINDA -->
+                            <li>
+                                <div class="bloco-familiar">
+                                    <img src="fotos/person_female.PNG" class="foto-perfil" alt="Minda">
+                                    <div class="info">
+                                        <span class="grau">Filha</span>
+                                        <div class="nome">Minda</div>
+                                        <div class="datas-dados">N. - Falecida<br>📍 Lubango, Angola</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- LINHAGEM 4: NECO -->
+                            <li>
+                                <div class="bloco-familiar">
+                                    <img src="fotos/person_unknown.PNG" class="foto-perfil" alt="Neco">
+                                    <div class="info">
+                                        <span class="grau">Filho</span>
+                                        <div class="nome">Neco</div>
+                                        <div class="datas-dados">N. - Falecido<br>📍 Lubango, Angola</div>
+                                    </div>
+                                </div>
+							</li>	
+       </ul> <!-- Fecha o ul dos filhos (Geração 3) -->
+    </li> <!-- Fecha o li do tronco principal (Isabel e João) -->
+</ul> <!-- Fecha o ul principal (Geração 1 e 2) -->
+</div> <!-- Fecha a div arvore-horizontal -->
+
+ <!-- BOTÃO PARA VOLTAR À PÁGINA INICIAL DO SITE -->
+
+    <p style="text-align: center; margin-top: 50px;">
+        <a href="../index.html" class="btn-voltar" style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7f8c8d;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+           ">⬅ Voltar à Página Principal</a>
+    </p>
+
+</body>
+<
