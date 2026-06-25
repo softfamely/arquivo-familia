@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genealogia Família Baptista & Borges</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f7f6;
+color: #333;
+text-align: center;
+padding: 50px 20px;
+display: flex;
+flex-direction: column;
+min-height: 85vh;
+}
+h1 { color: #2c3e50; }
+p { color: #7f8c8d; font-size: 1.1em; }
+
+/* Container principal */
+.content {
+flex: 1;
+}
+
+.menu-container {
+max-width: 800px; /* Alargado para acomodar os 3 botões por linha */
+margin: 40px auto;
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Estrutura vertical principal */
+.botoes-lado-a-lado {
+display: flex;
+flex-direction: column; 
+gap: 15px; 
+margin: 15px 0;
+}
+
+/* Grelhas duplas (2 colunas) */
+.grelha-dupla {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+/* Grelha de Ramos (3 colunas) */
+.grelha-ramos {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+gap: 15px;
+margin: 5px 0;
+}
+
+/* Títulos de Separação de Famílias */
+.titulo-familia {
+text-align: left;
+font-size: 1.2em;
+font-weight: bold;
+color: #2c3e50;
+margin-top: 15px;
+margin-bottom: 5px;
+border-bottom: 2px solid #ddd;
+padding-bottom: 5px;
+}
+
+/* Adaptação para ecrãs de telemóvel */
+@media (max-width: 600px) {
+.grelha-ramos, .grelha-dupla {
+grid-template-columns: 1fr;
+}
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px; /* Espaço entre o texto e o símbolo */
+color: white;
+padding: 15px;
+text-decoration: none;
+font-size: 1.05em; 
+font-weight: bold;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+/* ================= CORES FAMÍLIA BAPTISTA ================= */
+.btn-verde { background-color: #27ae60; }
+.btn-verde:hover { background-color: #219653; }
+
+.btn-azul { background-color: #2980b9; }
+.btn-azul:hover { background-color: #2471a3; }
+
+.btn-indigo { background-color: #34495e; }
+.btn-indigo:hover { background-color: #2c3e50; }
+
+.btn-documentos { background-color: #7f8c8d; }
+.btn-documentos:hover { background-color: #95a5a6; }
+
+/* Cor de Laranja para o botão do Formulário */
+.btn-formulario { background-color: #e67e22; }
+.btn-formulario:hover { background-color: #d35400; }
+
+
+/* ================= NOVAS CORES FAMÍLIA BORGES ================= */
+/* Árvore Borges (Vermelho Escuro / Vinho) */
+.btn-borges-azul { background-color: #c0392b; }
+.btn-borges-azul:hover { background-color: #a93226; }
+
+/* Índice Borges (Castanho Escuro) */
+.btn-borges-indigo { background-color: #6e2c00; }
+.btn-borges-indigo:hover { background-color: #5e2500; }
+
+/* Documentos Borges (Cinzento Escuro Metálico) */
+.btn-borges-documentos { background-color: #34495e; }
+.btn-borges-documentos:hover { background-color: #2c3e50; }
+
+/* Ramos Borges (Tons Ocre / Mostarda Escuro) */
+.btn-borges-verde { background-color: #d35400; }
+.btn-borges-verde:hover { background-color: #ba4a00; }
+
+/* Botão do Álbum Borges (Roxo) */
+.btn-album { background-color: #8e44ad; }
+.btn-album:hover { background-color: #7d3c98; }
+
+
+/* Caixa de Aviso de Privacidade */
+.privacidade-box {
+max-width: 580px;
+margin: 30px auto 30px auto;
+padding: 15px 20px;
+background-color: #ebf5fb; 
+border-left: 4px solid #2980b9; 
+border-radius: 4px;
+text-align: left; 
+font-size: 0.92em;
+color: #5d6d7e;
+line-height: 1.5;
+}
+
+/* Zona de Comentários */
+.comentarios-container {
+max-width: 600px;
+margin: 40px auto;
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+text-align: left;
+}
+
+/* Estilo do Rodapé */
+footer {
+margin-top: 50px;
+font-size: 0.9em;
+color: #95a5a6;
+}
+</style>
+</head>
+<body>
+
+<div class="content">
+<h1>Arquivo Genealógico da Família Borges</h1>
+<p>Selecione um dos ramos familiares abaixo para explorar a nossa história.</p>
+
+<div class="menu-container">
+<div class="botoes-lado-a-lado">
+    
+    <div class="titulo-familia">📜 Família Borges</div>
+
+    <!-- 1º BOTÃO: Azul (Árvore) original -->
+    <a href="site_arvore/index.svg" class="btn btn-azul" target="_blank">Árvore Genealógica Borges- ascendentes ➔</a>
+
+    <!-- 2º BOTÃO: Dividido em dois (Índice de Apelidos original + Pasta de Documentos original) -->
+    <div class="grelha-dupla">
+        <a href="indece_nomes.html" class="btn btn-indigo">Índice de todos os apelidos na base de dados ➔</a>
+        <a href="documentos_baptistas/" class="btn btn-documentos">Arquivo de Documentos Borges ➔</a>
+    </div>
+
+    <!-- GRELHA ORIGINAL DE BOTÕES VERDES -->
+    <div class="grelha-ramos">
+        
+        <a href="aldina_baptista/index.html" class="btn btn-verde">Aldina (Borges) ➔</a>
+        <a href="/index.html" class="btn btn-verde">Estela (Santiago) ➔</a>
+        <a href="/index.html" class="btn btn-verde">Arlete (Jorge) ➔</a>
+        <a href="/index.html" class="btn btn-verde">Arlindo Manuel Martins Borges ➔</a>
+        
+        
+    </div>
+         
+    <!-- 3º BOTÃO: Laranja original -->
+    <a href="https://forms.gle/5UaMCrpSsHDWcxeHA" class="btn btn-formulario" target="_blank">➕ Enviar Fotos, Datas ou Novos Familiares ➔</a>
+
+
+    
+<!-- ================= CONTEÚDO DA FAMÍLIA BORGES ================= -->
+    
+
+</div>
+</div>
+
+<div class="privacidade-box">
+<strong>Nota de Privacidade:</strong> Por uma questão de privacidade de todos os que estão no grupo, incluí apenas o primeiro e o último nome de cada um, e as fotografias são exclusivamente dos familiares que já faleceram. Espero que gostem de recordar as nossas raízes! Deixem nos comentários as vossas memórias ou histórias sobre eles.
+</div>
+
+<!-- SECÇÃO DE COMENTÁRIOS DO SITE -->
+<div class="comentarios-container">
+<h2>💬 Espaço de Comentários</h2>
+<p style="font-size: 0.9em; color: #7f8c8d; margin-bottom: 20px;">Utilize o espaço abaixo para deixar mensagens à família ou partilhar memórias antigas.</p>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "https://github.io";  
+        this.page.identifier = "arquivobaptista-home"; 
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://disqus.com';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+</div>
+
+</div>
+
+<footer>
+<p>Desenvolvido por <strong>@Luis Borges</strong> | 2026</p>
+</footer>
+
+</body>
+</html>
