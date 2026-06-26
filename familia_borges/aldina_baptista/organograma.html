@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organograma - Árvore Genealógica</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f7f6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: auto; padding: 40px; }
+header { text-align: center; margin-bottom: 40px; }
+header h1 { color: #2c3e50; font-size: 28px; margin-bottom: 5px; }
+header p { color: #7f8c8d; font-size: 14px; }
+.árvore-content { display: flex; justify-content: center; align-items: flex-start; padding: 20px; width: max-content; margin: 0 auto; }
+.tree ul { padding-top: 20px; position: relative; transition: all 0.5s; display: flex; justify-content: center; }
+.tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 10px 0 10px; transition: all 0.5s; }
+.tree li::before, .tree li::after { content: ''; position: absolute; top: 0; right: 50%; border-top: 2px solid #bdc3c7; width: 50%; height: 20px; }
+.tree li::after { right: auto; left: 50%; border-left: 2px solid #bdc3c7; }
+.tree li:only-child::after, .tree li:only-child::before { display: none; }
+.tree li:only-child { padding-top: 0; }
+.tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+.tree li:last-child::before { border-right: 2px solid #bdc3c7; border-radius: 0 5px 0 0; }
+.tree li:first-child::after { border-radius: 5px 0 0 0; }
+.tree ul ul::before { content: ''; position: absolute; top: 0; left: 50%; border-left: 2px solid #bdc3c7; width: 0; height: 20px; }
+.bloco-familia { display: inline-flex; gap: 4px; background: #ffffff; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative; z-index: 10; }
+.cartao { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 6px; width: 230px; text-align: left; background: #fff; }
+.membro-linhagem { border-left: 4px solid #3498db; background: #f0f7fc; }
+.conjuge { border-left: 4px solid #e74c3c; background: #fdf2f2; }
+.cartao img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.dados { display: flex; flex-direction: column; overflow: hidden; }
+.nome { font-size: 12px; font-weight: 600; color: #2c3e50; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.datas { font-size: 10px; color: #95a5a6; margin-top: 2px; }
+.tag-conjuge { font-size: 9px; font-weight: bold; color: #e74c3c; text-transform: uppercase; }
+footer { text-align: center; margin-top: 60px; color: #7f8c8d; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+<h1>🌳 Árvore Genealógica</h1>
+<p>Linhagem Organograma de Gualdina Baptista (Aldina)</p>
+</header>
+<div class="árvore-content">
+<div class="tree"><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/aldina_baptista.jpeg" alt="Gualdina Baptista (Aldina)" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Gualdina Baptista (Aldina)</div>
+<div class="datas">N: 1908 - F: 1988</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/manoel_borges.jpeg" alt="Manoel Martins Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Manoel Martins Borges</div>
+<div class="datas">N: 26/02/1897 - F: 31/07/1963</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/arlindo_borges.jpeg" alt="Arlindo Manuel Martins Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Arlindo Manuel Martins Borges</div>
+<div class="datas">N: 06/06/1936 - F: 04/09/1989</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/violante_borges.jpg" alt="Maria Violante Rodrigues Cabrita" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Maria Violante Rodrigues Cabrita</div>
+<div class="datas">N: 18/11/1940 - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/jose_manuel_borges.jpg" alt="José M.Rodrigues Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">José M.Rodrigues Borges</div>
+<div class="datas">N: 02/10/1962 - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/dulcineia_d_borges.jpg" alt="Dulcineia D. Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Dulcineia D. Borges</div>
+<div class="datas">N: 1960 - F: 2000</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Eliana D. Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Eliana D. Borges</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_unknown.png" alt="José Diogo D. Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">José Diogo D. Borges</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li></ul></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="file:///C:/Users/Luis%20Borges/Desktop/Site_Geral/baptista_borges/fotos/luis_alberto_borges.jpg" alt="Luis A.Rodrigues Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Luis A.Rodrigues Borges</div>
+<div class="datas">N: 01/12/1964 - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/person_female.png" alt="Anabela Figueiredo" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Anabela Figueiredo</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/luis_daniel_borges.jpg" alt="Luis Daniel F. Borges" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Luis Daniel F. Borges</div>
+<div class="datas">N: 20/05/2000 - F: N/A</div>
+</div>
+</div>
+</div></li></ul></li></ul></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/arlete_jorge.jpg" alt="Arlete Baptista (Jorge)" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Arlete Baptista (Jorge)</div>
+<div class="datas">N: N/A - F: N/a</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/veranio_jorge.jpg" alt="Verânio Jorge" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Verânio Jorge</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/Carlos_f_jorge.jpg" alt="Carlos A. F. Jorge" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Carlos A. F. Jorge</div>
+<div class="datas">N: 1953 - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/person_female.png" alt="Mila Oliveira" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Mila Oliveira</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Nisa Jorge" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Nisa Jorge</div>
+<div class="datas">N: 1978 - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_unknown.png" alt="Fábio Jorge" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Fábio Jorge</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li></ul></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/paula_jorge.jpg" alt="Paula F. Jorge" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Paula F. Jorge</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/person_unknown.png" alt="Hugo" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Hugo</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_unknown.png" alt="Hugo Santos" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Hugo Santos</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_unknown.png" alt="Daniel Jorge Santos" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Daniel Jorge Santos</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li></ul></li></ul></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/estela_santiago.jpg" alt="Estela Baptista (Santiago)" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Estela Baptista (Santiago)</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/manuel_santiago.jpg" alt="Manuel  Martins Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Manuel  Martins Santiago</div>
+<div class="datas">N: 13/05/1921 - F: 21/07/1969</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/norberto_santiago.jpg" alt="Norberto Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Norberto Santiago</div>
+<div class="datas">N: 1949 - F: N/A</div>
+</div>
+</div>
+
+<div class="cartao conjuge">
+<img src="fotos/person_female.png" alt="Belinha Novo Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<span class="tag-conjuge">💍 Cônjuge</span>
+<div class="nome">Belinha Novo Santiago</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div><ul><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Katheleen Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Katheleen Santiago</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Nádia Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Nádia Santiago</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Liliana Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Liliana Santiago</div>
+<div class="datas">N: N/A - F: N/A</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Gisela Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Gisela Santiago</div>
+<div class="datas">N: 1979 - F: N/A</div>
+</div>
+</div>
+</div></li></ul></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="Nela Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">Nela Santiago</div>
+<div class="datas">N: N/A - F: Faleceu</div>
+</div>
+</div>
+</div></li><li><div class="bloco-familia">
+<div class="cartao membro-linhagem">
+<img src="fotos/person_female.png" alt="São Santiago" onerror="this.src='fotos/person_unknown.png'">
+<div class="dados">
+<div class="nome">São Santiago</div>
+<div class="datas">N: N/A - F: Faleceu</div>
+</div>
+</div>
+</div></li></ul></li></ul></li></ul></div>
+</div>
+<footer><p>© @Luis Borges | 2026 — Todos os direitos reservados.</p></footer>
+</body>
+</html>
