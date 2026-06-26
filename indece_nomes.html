@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Pública - Árvore Genealógica Borges & Baptistas</title>
+    <!-- Carrega a base de dados relacional -->
+    <script src="membros.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 15px; }
+        
+        /* Layout Inteligente: Lado a lado no PC, empilhado na vertical no Telemóvel */
+        .container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+        @media (min-width: 768px) {
+            .container { display: grid; grid-template-columns: 1.2fr 2fr; }
+        }
+        
+        /* Ajustes do Cabeçalho Escuro */
+        header { background-color: #2c3e50; color: white; padding: 15px 20px; border-radius: 8px; margin-bottom: 15px; display: flex; flex-direction: column; gap: 10px; }
+        @media (min-width: 576px) {
+            header { flex-direction: row; justify-content: space-between; align-items: center; }
+        }
+        
+        h1 { margin: 0; font-size: 22px; }
+        h2, h3 { margin: 0 0 10px 0; font-size: 18px; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: fit-content; }
+        
+        /* Lista lateral adaptável */
+        .lista-membros { max-height: 400px; overflow-y: auto; margin-top: 15px; border: 1px solid #eee; border-radius: 4px; }
+        @media (min-width: 768px) {
+            .lista-membros { max-height: 650px; }
+        }
+        
+        .membro-item { padding: 12px; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .membro-item:hover { background-color: #f1f5f8; }
+        .search-bar { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
+        
+        /* Ficha Biográfica Detalhada (Alinhamento horizontal alargado e quebra automática) */
+        .detalhe-header { display: flex; flex-direction: row; align-items: center; text-align: left; gap: 20px; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 15px; width: 100%; }
+        .detalhe-header div { flex: 1; min-width: 0; }
+        .detalhe-header h2 { margin: 0 0 5px 0; color: #2c3e50; font-size: 22px; white-space: normal; word-wrap: break-word; }
+        
+        .foto-perfil { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #34495e; background: #fff; }
+        .bloco-dados { margin-bottom: 12px; background: #f8f9fa; padding: 12px; border-radius: 6px; border-left: 4px solid #2c3e50; word-wrap: break-word; }
+        .bloco-dados h4 { margin: 0 0 5px 0; color: #2c3e50; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .bloco-dados p { margin: 4px 0; font-size: 13.5px; line-height: 1.4; }
+        
+        .badge { padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; color: white; display: inline-block; }
+        .badge-m { background: #2980b9; }
+        .badge-f { background: #e74c3c; }
+        
+        /* Botão do PDF grande para telemóvel */
+        .btn-doc { display: block; text-align: center; padding: 10px 15px; background: #34495e; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold; margin-top: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn-doc:hover { background: #2c3e50; }
+		/* Botão para Voltar à Página Inicial */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+}
+.btn-voltar:hover {
+    background-color: #415b76;
+}
+
+        .sem-selecao { text-align: center; color: #7f8c8d; padding: 30px; font-style: italic; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+    <div>
+        <h1>🌳 Arquivo Familiar</h1>
+        <small>Plataforma Local de Consulta e Pesquisa Histórica</small>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <!-- Novo Botão de Voltar -->
+        <a href="index.html" class="btn-voltar">
+            🏠 Voltar ao Início
+        </a>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 4px;">
+            Base Relacional Ativa (UUID)
+        </span>
+    </div>
+</header>
+
+
+    <!-- ASSINATURA GLOBAL DO ARQUIVO -->
+    <div style="text-align: right; font-size: 12px; color: #7f8c8d; font-weight: 500; margin-top: -5px; margin-bottom: 15px; padding-right: 5px; letter-spacing: 0.5px;">
+        @Luis Borges | 2026
+    </div>
+
+    <div class="container">
+        <!-- COLUNA ESQUERDA: LISTA DE PESQUISA -->
+        <div class="card">
+            <h2>🔍 Procurar Familiar</h2>
+            <input type="text" id="txtPesquisa" class="search-bar" placeholder="Escreva o nome para filtrar..." oninput="filtrarMembros()">
+            
+            <div id="listaMembrosContainer" class="lista-membros">
+                <!-- Injetado via JS -->
+            </div>
+        </div>
+
+        <!-- COLUNA DIREITA: FICHA DETALHADA E PARENTESCO CALCULADO -->
+        <div class="card" id="painelDetalhes">
+            <div class="sem-selecao">
+                Selecione um familiar na lista lateral para mapear a sua biografia e árvore ascendente.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =================================================================
+        // MOTOR LÓGICO DE RESOLUÇÃO RELACIONAL CRUZADA POR UUID
+        // =================================================================
+        
+        function obterConjuge(pessoaId) {
+            if (typeof casamentos === "undefined" || !Array.isArray(casamentos)) return null;
+            const familia = casamentos.find(c => c.parceiro1_id === pessoaId || c.parceiro2_id === pessoaId);
+            if (!familia) return null;
+            const conjugeId = familia.parceiro1_id === pessoaId ? familia.parceiro2_id : familia.parceiro1_id;
+            return pessoas.find(p => p.id === conjugeId) || null;
+        }
+
+        function obterPais(pessoaId) {
+            if (typeof casamentos === "undefined" || !Array.isArray(casamentos)) return { pai: null, mae: null };
+            const familia = casamentos.find(c => c.filhos && c.filhos.includes(pessoaId));
+            if (!familia) return { pai: null, mae: null };
+            
+            const p1 = pessoas.find(p => p.id === familia.parceiro1_id);
+            const p2 = pessoas.find(p => p.id === familia.parceiro2_id);
+            
+            return {
+                pai: p1?.genero === 'M' ? p1 : (p2?.genero === 'M' ? p2 : null),
+                mae: p1?.genero === 'F' ? p1 : (p2?.genero === 'F' ? p2 : null)
+            };
+        }
+
+        function obterAvos(pessoaId) {
+            const { pai, mae } = obterPais(pessoaId);
+            const avosPaternos = pai ? obterPais(pai.id) : { pai: null, mae: null };
+            const avosMaternos = mae ? obterPais(mae.id) : { pai: null, mae: null };
+            
+            return {
+                avoPaterno: avosPaternos.pai,
+                avoPaterna: avosPaternos.mae,
+                avoMaterno: avosMaternos.pai,
+                avoMaterna: avosMaternos.mae
+            };
+        }
+
+        function obterIrmaos(pessoaId) {
+            if (typeof casamentos === "undefined" || !Array.isArray(casamentos)) return [];
+            const familia = casamentos.find(c => c.filhos && c.filhos.includes(pessoaId));
+            if (!familia || !familia.filhos) return [];
+            
+            return pessoas.filter(p => familia.filhos.includes(p.id) && p.id !== pessoaId);
+        }
+
+        // Motor de busca indexado em tempo real
+        function filtrarMembros() {
+            const inputPesquisa = document.getElementById("txtPesquisa");
+            if (!inputPesquisa || typeof pessoas === "undefined") return;
+            
+            const termo = inputPesquisa.value.trim().toLowerCase();
+            const filtrados = termo === "" 
+                ? pessoas 
+                : pessoas.filter(p => (p.nomeCompleto || "").toLowerCase().includes(termo));
+                
+            renderizarLista(filtrados);
+        }
+
+        // Renderizador da Lista Lateral (Ordem Alfabética e biografia corrigida)
+        function renderizarLista(dadosParaExibir = null) {
+            const container = document.getElementById("listaMembrosContainer");
+            if (!container) return;
+            container.innerHTML = "";
+            
+            const fonteDados = dadosParaExibir || ((typeof pessoas !== "undefined") ? pessoas : []);
+            
+            if (fonteDados.length === 0) {
+                container.innerHTML = '<div style="text-align:center; color:#7f8c8d; padding:20px; font-size:13px; font-style:italic;">Nenhum familiar localizado.</div>';
+                return;
+            }
+
+            const ordenados = [...fonteDados].sort((a, b) => (a.nomeCompleto || "").localeCompare(b.nomeCompleto || ""));
+
+            ordenados.forEach((p) => {
+                const item = document.createElement("div");
+                item.className = "membro-item";
+                item.onclick = () => carregarFichaDetalhada(p.id);
+                
+                const badgeGenero = p.genero === "M" ? '<span class="badge badge-m">M</span>' : '<span class="badge badge-f">F</span>';
+                const dataNasc = p.biografia?.dataNascimento || '---';
+                
+                item.innerHTML = `
+                    <div>
+                        <strong>${p.nomeCompleto || 'Sem Nome'}</strong><br>
+                        <small style="color: #7f8c8d;">Nascimento: ${dataNasc}</small>
+                    </div>
+                    <div>
+                        ${badgeGenero}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Injeção da Ficha Detalhada no Painel Principal ao clicar
+        function carregarFichaDetalhada(idFamiliar) {
+            if (typeof pessoas === "undefined") return;
+            const p = pessoas.find(item => item.id === idFamiliar);
+            const container = document.getElementById("painelDetalhes");
+            if (!p || !container) return;
+
+            const conjuge = obterConjuge(p.id);
+            const { pai, mae } = obterPais(p.id);
+            const avos = obterAvos(p.id);
+            const irmaos = obterIrmaos(p.id);
+
+            const foto = p.arquivos && p.arquivos.caminhoFoto ? p.arquivos.caminhoFoto : "fotos/person_unknown.png";
+            const documentoLink = p.arquivos && p.arquivos.arquivoDocumental 
+                ? `<a href="${p.arquivos.arquivoDocumental}" target="_blank" class="btn-doc">📄 Abrir Documento de Prova (PDF)</a>` 
+                : '<span style="font-size:12px; color:#7f8c8d; font-style:italic;">Nenhum documento anexado</span>';
+
+            container.innerHTML = `
+                <div class="detalhe-header">
+                    <img src="${foto}" class="foto-perfil" onerror="this.src='fotos/person_unknown.png'">
+                    <div>
+                        <h2>${p.nomeCompleto || 'Sem Nome'}</h2>
+                        <span class="badge ${p.genero === 'M' ? 'badge-m' : 'badge-f'}" style="font-size:11px; padding:3px 6px;">
+                            📌 Género: ${p.genero === 'M' ? 'Masculino' : 'Feminino'}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bloco-dados">
+                    <h4>⏳ Dados Biográficos Permanentes</h4>
+                    <p><strong>Nascimento:</strong> ${p.biografia?.dataNascimento || '---'} ${p.biografia?.localNascimento ? `| ${p.biografia.localNascimento}` : ''}</p>
+                    <p><strong>Falecimento:</strong> ${p.biografia?.dataFalecimento || 'Presente / Vivo'} ${p.biografia?.localFalecimento ? `| ${p.biografia.localFalecimento}` : ''}</p>
+                </div>
+
+                <div class="bloco-dados" style="border-left-color: #27ae60;">
+                    <h4>💍 Linha de Matrimónio</h4>
+                    <p>${conjuge ? `Casado(a) com <strong>${conjuge.nomeCompleto}</strong>` : 'Nenhum vínculo de casamento registado para este ID.'}</p>
+                </div>
+
+                <div class="bloco-dados" style="border-left-color: #2980b9;">
+                    <h4>👶 Linha de Filiação Direta (1º Grau)</h4>
+                    <p><strong>Pai:</strong> ${pai ? pai.nomeCompleto : 'Desconhecido / Não parametrizado'}</p>
+                    <p><strong>Mãe:</strong> ${mae ? mae.nomeCompleto : 'Desconhecida / Não parametrizada'}</p>
+                </div>
+
+                <div class="bloco-dados" style="border-left-color: #8e44ad;">
+                    <h4>📜 Linha de Ascendência Direta (Avós - 2º Grau)</h4>
+                    <p><strong>Avós Paternos:</strong> ${avos.avoPaterno ? avos.avoPaterno.nomeCompleto : '---'} e ${avos.avoPaterna ? avos.avoPaterna.nomeCompleto : '---'}</p>
+                    <p><strong>Avós Maternos:</strong> ${avos.avoMaterno ? avos.avoMaterno.nomeCompleto : '---'} e ${avos.avoMaterna ? avos.avoMaterna.nomeCompleto : '---'}</p>
+                </div>
+
+                <div class="bloco-dados" style="border-left-color: #f39c12;">
+                    <h4>👬 Linha de Irmãos</h4>
+                    <p>${irmaos.length > 0 ? irmaos.map(i => i.nomeCompleto).join(", ") : 'Nenhum irmão direto encontrado nas uniões dos pais.'}</p>
+                </div>
+
+                <div class="bloco-dados" style="border-left-color: #7f8c8d;">
+                    <h4>📂 Notas de Fontes e Arquivo</h4>
+                    <p style="font-style: italic; white-space: pre-wrap;">${p.notas || "Sem observações arquivadas."}</p>
+                    <div style="margin-top:15px; border-top:1px dashed #ccc; padding-top:10px;">
+                        <strong>Ficheiro Físico:</strong><br>
+                        ${documentoLink}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Inicializador automático de arranque da página
+        window.onload = function() {
+            renderizarLista();
+        };
+    </script>
+</body>
+</html>
+
+
