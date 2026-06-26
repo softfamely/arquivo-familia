@@ -884,23 +884,6 @@ const pessoas = [
       "arquivoDocumental": ""
     },
     "notas": ""
-  },
-  {
-    "id": "bfa81fcd-775f-4013-91e2-fed3d32126bd",
-    "nomeCompleto": "Anabela Figueiredo",
-    "genero": "F",
-    "familiaLinhagem": "",
-    "biografia": {
-      "dataNascimento": "N/A",
-      "localNascimento": "N/A",
-      "dataFalecimento": "",
-      "localFalecimento": ""
-    },
-    "arquivos": {
-      "caminhoFoto": "fotos/person_female.png",
-      "arquivoDocumental": ""
-    },
-    "notas": ""
   }
 ];
 
@@ -925,13 +908,18 @@ const casamentos = [
   },
   {
     "id": "d8d49d7a-e851-42d6-8584-48f498674796",
-    "parceiro1_id": "7334e553-2bc8-4879-bb38-5166bbe28f2b",
-    "parceiro2_id": "b09785bd-f64c-4e7f-8845-b68606dcf705",
+    "parceiro1_id": "b09785bd-f64c-4e7f-8845-b68606dcf705",
+    "parceiro2_id": "7334e553-2bc8-4879-bb38-5166bbe28f2b",
     "tipoRelacao": "Casamento",
     "dataCasamento": "",
     "localCasamento": "",
     "filhos": [
-      "57fb9eff-0070-4e4b-bd5f-d69cee6a6a95"
+      "57fb9eff-0070-4e4b-bd5f-d69cee6a6a95",
+      "81eed544-730d-49cb-8b84-b55cdb8cfb8e",
+      "55717ed4-ac69-4c83-8af4-a0f567aca9f5",
+      "d7373ff7-af67-451a-bc4c-9596f4fb1422",
+      "ac8ea7c3-47cc-4fa9-95d8-bccbfb8ed879",
+      "b9172a73-e86d-4834-9d22-c3fb4e170135"
     ]
   },
   {
@@ -1065,17 +1053,6 @@ const casamentos = [
     "filhos": [
       "c81adc93-b93e-4f4e-8390-358312268d8b",
       "cd571fde-371f-4437-b242-7d2269be2032"
-    ]
-  },
-  {
-    "id": "610f273a-c7cf-41c3-ba18-43ad859854bf",
-    "parceiro1_id": "9c756f8f-b732-40f7-b32c-999616380fb1",
-    "parceiro2_id": "bfa81fcd-775f-4013-91e2-fed3d32126bd",
-    "tipoRelacao": "Divorcio",
-    "dataCasamento": "",
-    "localCasamento": "",
-    "filhos": [
-      "23142ede-0d86-4975-8159-610ee30871a6"
     ]
   }
 ];

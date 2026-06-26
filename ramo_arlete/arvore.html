@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Árvore Genealógica - Geração 0</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; padding: 20px 10px; color: #2c3e50; }
+        
+        /* ASSINATURA EM GRANDE DESTAQUE */
+        .assinatura-topo { background-color: #2c3e50; color: #f1c40f; padding: 12px; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; border-radius: 8px; margin-bottom: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        
+        h1 { text-align: center; color: #2c3e50; font-size: 22px; margin-bottom: 25px; font-weight: 800; padding: 0 10px; }
+        .container { width: 100%; max-width: 800px; margin: 0 auto; background: #fff; padding: 20px 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 15px; }
+        
+        /* Estilos dos blocos injetados */
+        .geracao-bloco { border-radius: 8px; padding: 12px; margin-top: 5px; }
+        h6 { margin: 0 0 10px 0; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Ajuste de flexbox para os cartões dentro dos blocos */
+        .geracao-bloco > div { display: flex; flex-wrap: wrap; gap: 10px; }
+        
+        /* Rodapé de Assinatura */
+        footer { margin-top: 40px; text-align: center; font-size: 11px; color: #7f8c8d; font-weight: bold; padding: 10px; }
+    /* Botão Voltar Integrado */
+.container-voltar {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    padding: 0 10px;
+    display: flex;
+}
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-voltar:hover {
+    background-color: #34495e;
+}
+.btn-voltar:active {
+    transform: scale(0.98);
+}
+
+   </style>
+</head>
+<body>
+<body>
+<div class="assinatura-topo">@Luis Borges | 2026</div>
+
+<!-- NOVO: Contentor com o Botão de Voltar -->
+<div class="container-voltar">
+    <a href="../index.html" class="btn-voltar">
+        ⬅️ Voltar à Página Inicial
+    </a>
+</div>
+
+
+    <div class="container">
+        
+                <div class="geracao-bloco" style="margin-top: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+                    <h6 style="margin: 0 0 10px 0; color: #475569; font-size: 12px; font-weight: bold; text-transform: uppercase;">⬆️ Geração +4 (Antepassados / Pais / Avós)</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/person_female.png" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Maria Martins </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Manuel Martins de Sam Thiago</span>
+                </div>
+            </div>
+        
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #007bff; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/person_unknown.png" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Manuel Martins de Sam Thiago </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Maria Martins</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            
+                <div class="geracao-bloco" style="margin-top: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+                    <h6 style="margin: 0 0 10px 0; color: #475569; font-size: 12px; font-weight: bold; text-transform: uppercase;">⬆️ Geração +3 (Antepassados / Pais / Avós)</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #007bff; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/person_unknown.png" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Joaquim Martins de S. Thiago (Borges) </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Rosália Maria Tavares da Silva Martins</span>
+                </div>
+            </div>
+        
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/person_female.png" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Rosália Maria Tavares da Silva Martins </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Joaquim Martins de S. Thiago (Borges)</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            
+                <div class="geracao-bloco" style="margin-top: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+                    <h6 style="margin: 0 0 10px 0; color: #475569; font-size: 12px; font-weight: bold; text-transform: uppercase;">⬆️ Geração +2 (Antepassados / Pais / Avós)</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/person_female.png" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Maria Tavares da Silva </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: 13/08/1871</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Albino Martins Borges</span>
+                </div>
+            </div>
+        
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #007bff; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/albino_borges.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Albino Martins Borges </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: 06/02/1867</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Maria Tavares da Silva</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            
+                <div class="geracao-bloco" style="margin-top: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+                    <h6 style="margin: 0 0 10px 0; color: #475569; font-size: 12px; font-weight: bold; text-transform: uppercase;">⬆️ Geração +1 (Antepassados / Pais / Avós)</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #007bff; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/manoel_borges.jpeg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Manoel Martins Borges </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: 26/02/1897</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Gualdina Baptista (Aldina)</span>
+                </div>
+            </div>
+        
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/aldina_baptista.jpeg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Gualdina Baptista (Aldina) </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: 1908</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Manoel Martins Borges</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            
+        <div class="geracao-bloco" style="margin-top: 15px; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <h6 style="margin: 0 0 10px 0; color: #b45309; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">⭐ Geração 0 (Ponto de Origem Central)</h6>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/arlete_jorge.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Arlete Baptista (Jorge)  (Alvo)</strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">💍 Cônjuge: Verânio Jorge</span>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+    
+                <div class="geracao-bloco" style="margin-top: 15px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 8px; padding: 12px;">
+                    <h6 style="margin: 0 0 10px 0; color: #166534; font-size: 12px; font-weight: bold; text-transform: uppercase;">⬇️ Geração -1 (Descendência / Filhos / Netos)</h6>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #007bff; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/Carlos_f_jorge.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Carlos A. F. Jorge </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: 1953</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">Divorciado(a) de: Mila Oliveira</span>
+                </div>
+            </div>
+        
+            <div class="cartao-membro" style="display: flex; align-items: center; gap: 12px; background: white; padding: 12px; border-radius: 6px; border: 1px solid #dee2e6; border-left: 5px solid #db2777; min-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin: 5px;">
+                <img src="fotos/paula_jorge.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; background-color:#e9ecef;">
+                <div style="display: flex; flex-direction: column;">
+                    <strong style="font-size: 13px; color: #2c3e50;">Paula F. Jorge </strong>
+                    <span style="font-size: 11px; color: #7f8c8d; margin-top:2px;">📅 Nasc: N/A</span>
+                    <span style="font-size: 11px; color: #7f8c8d;">📍 Freguesia: N/A</span>
+                    <span style="font-size: 11px; color: #db2777; margin-top:2px;">Divorciado(a) de: Hugo</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            
+    </div>
+
+    <footer>Desenvolvido por @Luis Borges | 2026</footer>
+</body>
+</html>
